@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: scheduler_development
+
+test:
+  <<: *default
+  database: scheduler_test
+
+production:
+  <<: *default
+  database: scheduler_production
+  username: scheduler
+  password: <%= ENV['SCHEDULER_DATABASE_PASSWORD'] %>
