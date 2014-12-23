@@ -10,7 +10,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'quiet_assets'
   gem 'factory_girl_rails'
+  gem 'spring-commands-rspec'
   gem 'shoulda-matchers', require: false
+  gem 'database_cleaner', '~> 1.3.0'
 end
 
 # Use SCSS for stylesheets
