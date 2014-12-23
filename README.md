@@ -12,17 +12,35 @@ Models
 - shift
 - blackout
 
+**User**
+```ruby
+class User
+  has_many :shifts
+  has_many :blackouts
+end
+```
 
-User
-has_many :shifts
-has_many :blackouts
+**Hospital**
+```ruby
+class Hospital
+  has_many :shifts
+end
+```
 
-Hospital
-has_many :shifts
+**Shift**
+```ruby
+class Shift
+  belongs_to :user
+  belongs_to :hospital
+end
+```
 
-Shift
-belongs_to :user
-belongs_to :hospital
+**Blackout**
+```ruby
+class Blackout
+  belongs_to :user
+end
+```
 
-Blackout
-belongs_to :user
+Research
+-http://fullcalendar.io/
