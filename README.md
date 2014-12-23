@@ -42,5 +42,5 @@ class Blackout
 end
 ```
 
-Research
+Research  
 -http://fullcalendar.io/
